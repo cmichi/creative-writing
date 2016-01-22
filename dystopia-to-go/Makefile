@@ -1,8 +1,8 @@
 default:
-	xelatex --halt-on-error dystopie.tex > /dev/null
+	xelatex --halt-on-error dystopia.tex > /dev/null
 
 alert: 
-	xelatex --halt-on-error dystopie.tex 
+	xelatex --halt-on-error dystopia.tex 
 
 print:
 	make default
