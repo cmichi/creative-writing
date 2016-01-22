@@ -1,0 +1,399 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt,paper=a5,pagesize,english,openright,twoside]{scrbook}
+
+% switch margins
+% http://tex.stackexchange.com/questions/10128/two-sided-document-reverse-page-margins-for-hardcopy
+% http://stackoverflow.com/questions/2565755/latex-book-class-twosided-document-with-wrong-margins
+%\let\tmp\oddsidemargin
+%\let\oddsidemargin\evensidemargin
+%\let\evensidemargin\tmp
+%\reversemarginpar
+
+\usepackage{typearea}
+\typearea[10mm]{10}
+
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{verbatim}
+
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{fontspec, graphicx}
+\usepackage{lettrine}
+\usepackage{setspace} 
+\usepackage{afterpage} 
+\usepackage{floatpag}
+\usepackage{ragged2e}
+
+\usepackage{multicol}
+
+\usepackage{textcomp}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[LE,RO]{\centering{\thepage}}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+%\setmainfont[Ligatures = {Common, Rare}]{Adobe Garamond Pro}
+\setmainfont[Ligatures = {Common, Rare}]{PF Din Text Cond Pro}
+\parindent0mm
+\parskip3mm
+
+\usepackage{polyglossia}
+\setmainlanguage[variant=british]{english}
+
+\newcommand{\engine}[0]{ {\fontspec{Latin Modern Roman}\normalsize \XeLaTeX}}
+\newcommand{\enginetwo}[0]{ {\fontspec{Latin Modern Roman}\normalsize \LaTeX}}
+\newcommand{\pc}[1]{{\fontspec{OCRA}\scriptsize \addfontfeature{LetterSpace=-12.0,WordSpace=.7}{#1}}}
+\newcommand{\q}[1]{»#1«}
+\newcommand{\newdoublepage}{\newpage\thispagestyle{empty} \ \newpage \thispagestyle{empty}}
+
+%\usepackage{geometry}
+
+% for centered fixed-width columns in tabular environment
+% http://tex.stackexchange.com/questions/12703/how-to-create-fixed-width-table-columns-with-text-raggedright-centered-raggedlef
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+
+\begin{document}
+
+%\ 
+%\thispagestyle{empty}
+%\newpage
+%\ 
+
+%\newgeometry{margin=1.3cm}
+\thispagestyle{empty}
+\raggedbottom
+
+\vspace{6.0cm}
+\ \\ 
+
+%\begin{minipage}[t]{7cm}
+\begin{addmargin}[-1.10cm]{0cm}
+{\fontspec{Gotham Black}\small
+	\begin{spacing}{15}
+	\noindent
+	\fontsize{96pt}{8pt}\selectfont
+		\hspace{.0cm}{\addfontfeature{LetterSpace=29}DYST}\\
+		{\addfontfeature{LetterSpace=33}OPIA}\\
+		\mbox{\addfontfeature{LetterSpace=10.0}TO\hspace{1.25cm}GO}\\
+	\end{spacing}
+}
+%\end{minipage}
+\end{addmargin}
+
+%\restoregeometry
+
+\thispagestyle{empty}
+\newpage
+\
+
+\thispagestyle{empty}
+\newpage
+
+\thispagestyle{empty}
+\afterpage{
+\thispagestyle{empty}
+
+\begin{figure*}
+\thispagestyle{empty}
+\floatpagestyle{empty}
+
+%\begin{addmargin}[7em]{2em}
+\setstretch{2.0}
+\begin{center}
+\textit{A long, long time ago\\
+I can still remember\\
+how that music\\ 
+used to make me smile\\
+%And I knew if I had my chance that I could make those people dance\\
+%And maybe they'd be happy for a while.
+}
+\end{center}
+%\end{addmargin}
+
+\begin{center}\scriptsize
+Don McLean --- American Pie
+\end{center}
+
+\clearpage
+\floatpagestyle{empty}
+\end{figure*}
+
+\thispagestyle{empty}
+\clearpage
+}
+
+\newpage \ \newpage
+
+\thispagestyle{empty}
+\ \newpage
+
+
+\thispagestyle{empty}
+%\newgeometry{margin=0cm}
+\begin{figure*}
+\floatpagestyle{empty}
+
+\vspace*{3.0cm}
+{\parindent0mm  
+
+\center
+	\hspace{0.0cm}
+	\Large\textbf{The Day the Music died}\\
+	\ \\
+	\ \\
+	\ \\
+	\ \\
+	%\large\textsc{--Michael Mueller--}\\
+}
+\ \\
+\end{figure*}
+
+%\restoregeometry
+
+
+\pagebreak
+\clearpage
+\
+\thispagestyle{empty}
+\newpage
+%\restoregeometry
+
+
+\setcounter{page}{1}
+\frenchspacing
+\lettrine[lines=3,lhang=0.21,nindent=0em,findent=0.1em]{T}{he}
+%Through the NSA leaks in the last year it has become clear that a lot of
+%the dystopian predictions have become true. This is why I think it is time
+%for a new dystopia. This is my proposition.
+first time I heard music was at my eighteenth birthday. My parents had
+saved a lot of money to afford me this gift: a ten second excerpt from 
+Beethoven's \textit{Symphony No. 9}. They chose a sequence with the chorus 
+singing a part of the Friedrich Schiller poem \textit{Ode to Joy}.
+
+When I heard the music I was alone in my room and wow! I can tell you,
+this blew me away. I was overwhelmed with emotions. I couldn't sleep for a 
+whole night. Always trying to recall the notes from memory. This happened 
+about forty years ago and since then a lot has changed. 
+
+By the year 2100 technology had progressed so much that through advances in
+electronic manufacturing it was now possible to replace the entire hearing 
+organ through a much more capable implant. Such implants enabled all kinds 
+of improvements: one could now listen directly to audio files or radio without 
+any loss in quality due to analog signal transfer. One could also just switch 
+the device off and eliminate any environmental noise --- no need for earplugs 
+anymore! 
+But most importantly, this led to the realization of a long awaited human 
+dream: the chip had the capability to directly translate any foreign language 
+into the individuals mother tongue. And all of that in real-time! There was 
+no need to learn any new languages anymore. 
+This was the breakthrough for the implants. In less than twenty years it was 
+a very common surgery to substitute one's hearing organ with an electronic
+chip. Such a surgery would usually be performed on three-year olds, since
+it turned out to work best at that age. 
+
+Sure, at first there was a small percentage of the population who refused to 
+participate in this surgery.
+It didn't take long until people who refused the implants were commonly 
+considered somehow disabled. They even had to declare this ``disability'' 
+in their passport, for others to recognize that they needed to be handled 
+with special care. It took another
+decade for the implant manufacturers to find out how much profit they could
+make from having successfully privatized hearing. At first it was just a
+marketing gag: certain bands released their music exclusively
+under the hearing implants of certain manufacturers. Through legal measures
+the manufacturers of other hearing implants were forbidden to play back these
+songs.
+
+Of course there were some manufacturers who consciously or unconsciously
+violated these licensing terms. But after several major court cases
+a lot of fines had to be paid for such violations. From then on the 
+the devices started filtering, making only licensed and permitted signals 
+audible.
+The court cases had started a rat race amongst manufacturers: they each made
+exclusive contracts with the record companies. In the end each individual
+had only a very limited choice of music. This was why after several years
+of hassle the manufacturers sat together to search for a better solution.
+In the end they came up with an \textsc{all music flatrate\texttrademark}. 
+To cover the licensing fees they made this offer available for
+a small monthly fee. To make the \textsc{all music flatrate\texttrademark} 
+even more attractive, it was from then on only possible to listen to music at 
+all once the flatrate was purchased. People were still able to play the 
+guitar or whistle, but soon the companies also closed this last loophole 
+and you just wouldn't hear the sound of the guitar or the sound produced by 
+whistling.
+At first the signals of police or emergency cars were mistakenly filtered out 
+by the implants. But the technology got better and certain adoptions had to 
+be made within society. Emergency car sirens were changed to arhythmic, 
+disharmonious noise and telephones stopped ringing.
+
+After a while, the price was slowly increased, until music was a thing subject 
+only to premium customers with enough money. Then, after a while, music
+became a luxury --- something consumed only by the rich upper class. Amongst
+common people, music is now seen as somewhat decadent. Many people don't
+even know someone who has ever heard music. They don't know what they are
+missing.
+
+Today is my 60th birthday. A long time has passed since I have become an
+adult. Throughout my entire life I never again had the pleasure of
+listening to music. Though I have often recalled those memories of my
+eighteenth birthday. Whenever I felt down or became sentimental, I would
+try to recall the notes from my memory and oftentimes I couldn't help my
+eyes filling with tears. Listening to music was surely one of the most 
+beautiful moments in my life.
+
+Since my eighteenth birthday I started to save up money. I had this
+one dream in my mind, this dream for which I would finally, someday, have 
+enough money. Today is the day. I have finally saved up enough. 
+Today I will finally spend it on my life's dream. 
+
+Music wasn't the only thing that got lost, other senses were substituted as well. 
+The companies limited other functionalities to premium customers as well.
+Today I have finally saved up enough money. Today I will finally buy 
+myself the license for seeing colors.
+
+
+%Whilst regularily reading the news I am on a regular basis quite erstaunt
+%how dystopian our world has become in some cases. The NSA leaks, patent
+%wars, sponsoring tanks, .etc.
+%So coming up with a fictional dystopia took some effort. But even for this
+%story the technical advances are quite far --- farer than most people know.
+% (cochlea)
+
+\clearpage
+\thispagestyle{empty}
+
+\ \\
+\vspace{8cm}\\
+%\sepg{}
+
+\newpage
+\thispagestyle{empty}
+\
+\newpage
+\thispagestyle{empty}
+\
+\newpage
+
+
+
+
+%\thispagestyle{empty}
+%\parindent0mm
+%\pagestyle{empty}
+%\raggedbottom
+\thispagestyle{empty}
+%\fancyfoot{}
+%\fancyfoot[C]{
+	%\centering
+	%Michael M\"uller\\
+	%\pc{http://micha.elmueller.net}
+%}
+
+%\thispagestyle{empty}
+
+%\include{appendix}
+
+\begin{multicols}{2} 
+%\thispagestyle{empty}
+\textbf{Background Info}\\ \ \\
+
+This text was typeset using the \textsc{pf din text condensed}. 
+The title page was set using \textsc{gotham} --- a nearly monospaced
+font designed by Tobias Frere-Jones for the GQ magazine.\\
+
+On the software side this document was typeset using \engine.
+The sourcecode used to render this document (and a resulting 
+\textsc{PDF}) is available here:\\ 
+\pc{https://github.com/cmichi/\allowbreak{}creative-writing}.\\
+%A \textsc{PDF} version of this document is available there as well.\\
+
+I gave the story to two proof readers, both of whom returned helpful 
+remarks. Thank you, Katja Rogers and Markus Schnalke.
+%\hspace{-0.1cm} \pc{https://github.com/cmichi/\-reworking-typography}\hspace{-0.1cm}. 
+
+\columnbreak
+%\thispagestyle{empty}
+
+\textbf{What to do with this document now?}\\
+
+%What should you do with this document now? 
+Of course you are free to do whatever you want with it, but I suggest 
+you either keep it, pass it on or leave it at some place where others will 
+likely find it and read it.\\
+
+\begin{center}
+\vspace{-0.5cm}
+	\includegraphics[height=1.0\baselineskip]{cc.eps}
+	\includegraphics[height=1.0\baselineskip]{by.eps}
+\end{center}
+
+\vspace{-0.75cm}
+This work is licensed freely under the \emph{Creative Commons Attribution 4.0 
+International (CC BY 4.0) License}. To view a copy of this license, visit
+\pc{http://creativecommons.org/\\licenses/by/4.0/}.\\ \ \\
+
+\end{multicols}
+\vfill
+	\centering
+	Michael M\"uller, July 2015\\
+	\pc{http://micha.elmueller.net}
+\thispagestyle{empty}
+
+
+%\input{appendix}
+
+
+%\newdoublepage
+\newpage
+\thispagestyle{empty}
+
+%\hspace{-7.9cm}\textbf{Logbook}\\ \ \\
+\begin{center}
+\hspace{-1.1cm}\textbf{Logbook}
+\end{center}
+\ \\ \ \\
+
+\begin{tabular}{C{0.0cm}C{0.20\textwidth} | C{0.26\textwidth} | C{0.38\textwidth}}
+\hline
+\vspace{0.3cm} & \hspace{-0.4cm}When? & Where? & Any thoughts?\\
+\hline
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+& &\\
+\end{tabular}
+
+%\newpage
+%\thispagestyle{empty}
+%\
+
+\end{document}
